@@ -6,7 +6,7 @@
 # catalog-version 1.00
 Name:		texlive-pst-mirror
 Version:	1.00
-Release:	6
+Release:	7
 Summary:	Images on a spherical mirror
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-mirror
