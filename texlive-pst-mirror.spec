@@ -1,19 +1,18 @@
-# revision 16370
+# revision 32997
 # category Package
 # catalog-ctan /graphics/pstricks/contrib/pst-mirror
-# catalog-date 2009-12-14 16:47:24 +0100
+# catalog-date 2014-02-26 23:03:13 +0100
 # catalog-license lppl
-# catalog-version 1.00
+# catalog-version 1.01
 Name:		texlive-pst-mirror
-Version:	1.00
-Release:	7
+Version:	1.01
+Release:	1
 Summary:	Images on a spherical mirror
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-mirror
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-mirror.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-mirror.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-mirror.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -39,32 +38,26 @@ mirror.
 %{_texmfdistdir}/tex/latex/pst-mirror/pst-mirror.sty
 %doc %{_texmfdistdir}/doc/generic/pst-mirror/Changes
 %doc %{_texmfdistdir}/doc/generic/pst-mirror/README
+%doc %{_texmfdistdir}/doc/generic/pst-mirror/createEPS/make.sh
+%doc %{_texmfdistdir}/doc/generic/pst-mirror/createEPS/script.readme
+%doc %{_texmfdistdir}/doc/generic/pst-mirror/createEPS/scripts/filtre.pl
+%doc %{_texmfdistdir}/doc/generic/pst-mirror/createEPS/test.pdf
+%doc %{_texmfdistdir}/doc/generic/pst-mirror/createEPS/test.sh
+%doc %{_texmfdistdir}/doc/generic/pst-mirror/createEPS/test.tex
+%doc %{_texmfdistdir}/doc/generic/pst-mirror/createEPS/xa.eps
+%doc %{_texmfdistdir}/doc/generic/pst-mirror/createEPS/xa.tex
+%doc %{_texmfdistdir}/doc/generic/pst-mirror/createEPS/xb.eps
+%doc %{_texmfdistdir}/doc/generic/pst-mirror/createEPS/xc.eps
 %doc %{_texmfdistdir}/doc/generic/pst-mirror/pst-mirror-doc.bib
 %doc %{_texmfdistdir}/doc/generic/pst-mirror/pst-mirror-doc.pdf
 %doc %{_texmfdistdir}/doc/generic/pst-mirror/pst-mirror-doc.tex
-#- source
-%doc %{_texmfdistdir}/source/generic/pst-mirror/Makefile
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a0 -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar dvips tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.00-2
-+ Revision: 755373
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.00-1
-+ Revision: 719369
-- texlive-pst-mirror
-- texlive-pst-mirror
-- texlive-pst-mirror
-- texlive-pst-mirror
-
+cp -fpar dvips tex doc %{buildroot}%{_texmfdistdir}
