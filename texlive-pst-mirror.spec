@@ -1,6 +1,6 @@
 Name:		texlive-pst-mirror
 Version:	60506
-Release:	1
+Release:	2
 Summary:	Images on a spherical mirror
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-mirror
