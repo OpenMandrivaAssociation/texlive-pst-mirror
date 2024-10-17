@@ -3,7 +3,7 @@ Version:	71294
 Release:	1
 Summary:	Images on a spherical mirror
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-mirror
+URL:		https://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-mirror
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-mirror.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-mirror.doc.r%{version}.tar.xz
